@@ -7,6 +7,12 @@
   <title>JSP - Hello World</title>
 </head>
 <body>
-<a href="products.jsp">Product</a>
+<h1 style="text-align: center">Chọn thao tác với: </h1>
+<table width="10%" align="center" border="1">
+  <tr>
+    <td><a href="products.jsp">Product</a></td>
+    <td><a href="order.jsp">Order</a></td>
+  </tr>
+</table>
 </body>
 </html>

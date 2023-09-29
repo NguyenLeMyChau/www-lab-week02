@@ -1,6 +1,7 @@
 package vn.edu.iuh.fit.week02_lab_nguyenlemychau_20046631.backend.models;
 
 import jakarta.persistence.*;
+import vn.edu.iuh.fit.week02_lab_nguyenlemychau_20046631.backend.converters.ProductStatusConverter;
 import vn.edu.iuh.fit.week02_lab_nguyenlemychau_20046631.backend.enums.ProductStatus;
 
 import java.util.ArrayList;
@@ -24,6 +25,7 @@ public class Product {
     @Column(name = "manufacturer_name", length = 100, nullable = false)
     private String manufacturer;
 
+    @Convert(converter = ProductStatusConverter.class)
     @Column(name = "status")
     private ProductStatus status;
 

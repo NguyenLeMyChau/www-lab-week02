@@ -3,7 +3,6 @@ package vn.edu.iuh.fit.week02_lab_nguyenlemychau_20046631.backend.repositories;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.Persistence;
-import jakarta.persistence.TypedQuery;
 import vn.edu.iuh.fit.week02_lab_nguyenlemychau_20046631.backend.enums.ProductStatus;
 import vn.edu.iuh.fit.week02_lab_nguyenlemychau_20046631.backend.models.Product;
 
