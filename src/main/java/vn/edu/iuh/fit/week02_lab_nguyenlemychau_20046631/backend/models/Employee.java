@@ -1,8 +1,8 @@
-package vn.edu.iuh.fit.week02_lab_nguyenlemychau_20046631.models;
+package vn.edu.iuh.fit.week02_lab_nguyenlemychau_20046631.backend.models;
 
 import jakarta.json.bind.annotation.JsonbDateFormat;
 import jakarta.persistence.*;
-import vn.edu.iuh.fit.week02_lab_nguyenlemychau_20046631.enums.EmployeeStatus;
+import vn.edu.iuh.fit.week02_lab_nguyenlemychau_20046631.backend.enums.EmployeeStatus;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -10,11 +10,7 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "employee")
-@NamedQueries(
-        @NamedQuery(name = "Employee.findAll", query = "select e from Employee e where e.status= ?1")
-//        ,@NamedQuery(name = "Employee.findXXXXXXX", query = "select e from Employee e where????")
-        //,...
-)
+
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

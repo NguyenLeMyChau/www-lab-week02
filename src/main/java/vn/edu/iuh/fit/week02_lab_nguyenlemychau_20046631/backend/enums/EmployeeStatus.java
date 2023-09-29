@@ -1,4 +1,4 @@
-package vn.edu.iuh.fit.week02_lab_nguyenlemychau_20046631.enums;
+package vn.edu.iuh.fit.week02_lab_nguyenlemychau_20046631.backend.enums;
 
 public enum EmployeeStatus {
     ACTIVE(1),
