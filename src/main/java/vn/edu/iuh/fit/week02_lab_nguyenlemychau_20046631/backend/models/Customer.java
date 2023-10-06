@@ -33,6 +33,10 @@ public class Customer {
         this.address = address;
     }
 
+    public Customer(long id) {
+        this.id = id;
+    }
+
     public long getId() {
         return id;
     }

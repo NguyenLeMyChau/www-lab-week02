@@ -5,6 +5,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import vn.edu.iuh.fit.week02_lab_nguyenlemychau_20046631.frontend.model.OrderModel;
 import vn.edu.iuh.fit.week02_lab_nguyenlemychau_20046631.frontend.model.ProductModel;
 
 import java.io.IOException;
@@ -44,6 +45,12 @@ public class ServletController extends HttpServlet {
                     ProductModel pm = new ProductModel();
                     pm.deleteProduct(req, resp);
                 }
+
+                else if (action.equals("insert_order")) {
+                    OrderModel om = new OrderModel();
+                    om.insertOrder(req, resp);
+                }
+
             } else {
                 resp.sendRedirect("index.jsp");
             }

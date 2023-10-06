@@ -11,7 +11,7 @@
 <table width="10%" align="center" border="1">
   <tr>
     <td><a href="products.jsp">Product</a></td>
-    <td><a href="order.jsp">Order</a></td>
+    <td><a href="orders.jsp">Order</a></td>
   </tr>
 </table>
 </body>

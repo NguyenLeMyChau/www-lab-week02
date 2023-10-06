@@ -17,7 +17,7 @@ public class Order {
     private LocalDateTime orderDate;
 
     @ManyToOne
-    @JoinColumn(name = "employee_id", nullable = false)
+    @JoinColumn(name = "emp_id", nullable = false)
     private Employee employee;
 
     @ManyToOne

@@ -2,6 +2,8 @@ package vn.edu.iuh.fit.week02_lab_nguyenlemychau_20046631.backend.models;
 
 import jakarta.json.bind.annotation.JsonbDateFormat;
 import jakarta.persistence.*;
+import vn.edu.iuh.fit.week02_lab_nguyenlemychau_20046631.backend.converters.EmployeeStatusConverter;
+import vn.edu.iuh.fit.week02_lab_nguyenlemychau_20046631.backend.converters.ProductStatusConverter;
 import vn.edu.iuh.fit.week02_lab_nguyenlemychau_20046631.backend.enums.EmployeeStatus;
 
 import java.time.LocalDateTime;
@@ -27,8 +29,10 @@ public class Employee {
     private String phone;
     @Column(name = "address", length = 250, nullable = false)
     private String address;
+
+    @Convert(converter = EmployeeStatusConverter.class)
     @Column(name = "status", nullable = false)
-    @Enumerated(EnumType.ORDINAL)
+    //@Enumerated(EnumType.ORDINAL)
     private EmployeeStatus status;
 
     @OneToMany(mappedBy = "employee", cascade = CascadeType.ALL)
@@ -45,6 +49,10 @@ public class Employee {
         this.phone = phone;
         this.address = address;
         this.status = status;
+    }
+
+    public Employee(long id) {
+        this.id = id;
     }
 
     public long getId() {

@@ -1,7 +1,8 @@
 <%@ page import="vn.edu.iuh.fit.week02_lab_nguyenlemychau_20046631.backend.services.OrderServices" %>
 <%@ page import="java.util.List" %>
-<%@ page import="vn.edu.iuh.fit.week02_lab_nguyenlemychau_20046631.backend.models.Order" %><%--
-  Created by IntelliJ IDEA.
+<%@ page import="vn.edu.iuh.fit.week02_lab_nguyenlemychau_20046631.backend.models.Order" %>
+<%@ page import="java.time.format.DateTimeFormatter" %>
+Created by IntelliJ IDEA.
   User: CHAU
   Date: 9/30/2023
   Time: 12:31 AM
@@ -16,6 +17,7 @@
 <%
     OrderServices orderServices = new OrderServices();
     List<Order> orders = orderServices.findAll();
+
 %>
 <table width="70%" align="center" border="1">
     <tr>
@@ -23,6 +25,7 @@
         <th>Order Date</th>
         <th>Customer ID</th>
         <th>Employee ID</th>
+        <th colspan="2"><a href="insertOrder.jsp">Insert</a> </th>
     </tr>
 
     <%
@@ -31,7 +34,7 @@
 
     <tr>
         <td><%=order.getOrder_id()%></td>
-        <td><%=order.getOrderDate()%></td>
+        <td><%= DateTimeFormatter.ofPattern("dd/MM/yyyy").format(order.getOrderDate())%></td>
         <td><%=order.getCustomer().getId()%></td>
         <td><%=order.getEmployee().getId()%></td>
     </tr>
