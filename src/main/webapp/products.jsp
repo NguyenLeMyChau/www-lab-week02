@@ -1,50 +1,93 @@
 <%@ page import="vn.edu.iuh.fit.week02_lab_nguyenlemychau_20046631.backend.services.ProductServices" %>
 <%@ page import="vn.edu.iuh.fit.week02_lab_nguyenlemychau_20046631.backend.models.Product" %>
 <%@ page import="java.util.List" %>
-<%@ page import="vn.edu.iuh.fit.week02_lab_nguyenlemychau_20046631.backend.enums.ProductStatus" %><%--
-  Created by IntelliJ IDEA.
-  User: CHAU
-  Date: 9/23/2023
-  Time: 9:37 PM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%@ page contentType="text/html;charset=UTF-8"%>
 <html>
 <head>
-    <title>Title</title>
+    <title>Products</title>
+    <style>
+        .header{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 1456px;
+            height: 117px;
+            background-color: #176D80;
+            color: white;
+            font-size: 40px;
+            margin-bottom: 50px;
+        }
+
+        table{
+            width: 100%;
+            text-align: center;
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: #176D80;
+            color: white;
+            padding: 15px;
+        }
+
+        td{
+            padding: 10px;
+        }
+
+
+        tr:nth-child(even){
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: coral;
+        }
+
+        a{
+            font-size: 25px;
+            text-decoration: none;
+        }
+
+        img{
+            width: 100px;
+            height: 100px;
+        }
+
+        input[type=number] {
+            width: 50px;
+            height: 30px;
+            font-size: 16px;
+            padding-left: 15px;
+        }
+    </style>
 </head>
 <body>
 <%
     ProductServices productServices = new ProductServices();
     List<Product> products = productServices.findAll();
 %>
-<table width="70%" align="center" border="1">
+<div class="header">
+    <label>Products</label>
+</div>
+<table>
     <tr>
-        <th>Id</th>
+        <th>Image</th>
         <th>Name</th>
-        <th>Description</th>
-        <th>Unit</th>
-        <th>Manufacturer:</th>
-        <th>Status</th>
-        <th colspan="2"><a href="insertProduct.jsp">Insert</a> </th>
+        <th>Price</th>
+        <th><a href="insertProduct.jsp" style="color: white">Insert</a> </th>
     </tr>
     <%
         for(Product product: products){
-        long id = product.getProduct_id();
+            long id = product.getProduct_id();
 
-        String delete_string = "controls?action=delete_product&id="+id;
-        String edit_string = "controls?action=edit_product&id="+id;
     %>
-    <tr>
-        <td><%=id%></td>
-        <td><%=product.getName()%></td>
-        <td><%=product.getDescription()%></td>
-        <td><%=product.getUnit()%></td>
-        <td><%=product.getManufacturer()%></td>
-        <td><%=product.getStatus()%></td>
-        <td><a href=>Update</a> </td>
-        <td><a href=<%=delete_string%>>Delete</a> </td>
-    </tr>
+        <tr>
+            <td><img src="<%=productServices.getProductImg(id).getPath()%>"></td>
+            <td><%=product.getName()%></td>
+            <td><%=productServices.getProductPrice(id).getPrice()%></td>
+            <td><a href="product_detail.jsp?product_id=<%=id%>">View</a></td>
+        </tr>
 
     <%}%>
 </table>

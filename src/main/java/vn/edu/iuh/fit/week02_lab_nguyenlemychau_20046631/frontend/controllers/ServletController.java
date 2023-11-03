@@ -36,19 +36,21 @@ public class ServletController extends HttpServlet {
             if (actionObject != null) {
                 String action = actionObject.toString();
 
-                if(action.equals("insert_products")){
-                    ProductModel pm = new ProductModel();
-                    pm.insertProduct(req, resp);
-                }
-
-                else if (action.equals("delete_product")) {
-                    ProductModel pm = new ProductModel();
-                    pm.deleteProduct(req, resp);
-                }
-
-                else if (action.equals("insert_order")) {
-                    OrderModel om = new OrderModel();
-                    om.insertOrder(req, resp);
+                switch (action) {
+                    case "insert_products": {
+                        ProductModel pm = new ProductModel();
+                        pm.insertProduct(req, resp);
+                        break;
+                    }
+                    case "delete_product": {
+                        ProductModel pm = new ProductModel();
+                        pm.deleteProduct(req, resp);
+                        break;
+                    }
+                    case "insert_order":
+                        OrderModel om = new OrderModel();
+                        om.insertOrder(req, resp);
+                        break;
                 }
 
             } else {

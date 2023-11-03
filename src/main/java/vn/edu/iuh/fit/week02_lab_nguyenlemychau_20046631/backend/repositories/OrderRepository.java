@@ -8,8 +8,8 @@ import vn.edu.iuh.fit.week02_lab_nguyenlemychau_20046631.backend.models.Order;
 import java.util.List;
 
 public class OrderRepository {
-    private EntityManager em;
-    private EntityTransaction trans;
+    private final EntityManager em;
+    private final EntityTransaction trans;
 
     public OrderRepository() {
         em = Persistence

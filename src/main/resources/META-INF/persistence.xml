@@ -15,7 +15,6 @@
       <property name="jakarta.persistence.jdbc.user" value="root"/>
       <property name="jakarta.persistence.jdbc.password" value="sapassword"/>
       <property name="jakarta.persistence.schema-generation.database.action" value="create"/>
-      <!--            <property name="jakarta.persistence.schema-generation.scripts.action" value="drop-and-create"/>-->
       <!--show query-->
       <property name="eclipselink.logging.level.sql" value="FINE"/>
       <property name="eclipselink.logging.parameters" value="true"/>
