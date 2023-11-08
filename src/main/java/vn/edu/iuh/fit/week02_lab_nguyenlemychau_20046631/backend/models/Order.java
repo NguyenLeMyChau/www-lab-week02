@@ -9,7 +9,6 @@ import java.util.List;
 @Table(name = "orders")
 public class Order {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "order_id")
     private long order_id;
 
@@ -24,7 +23,7 @@ public class Order {
     @JoinColumn(name = "cust_id")
     private Customer customer;
 
-    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn
     private List<OrderDetail> orderDetails;
 
@@ -36,6 +35,18 @@ public class Order {
         this.orderDate = orderDate;
         this.employee = employee;
         this.customer = customer;
+    }
+
+    public Order(long order_id, LocalDateTime orderDate, Employee employee, Customer customer, List<OrderDetail> orderDetails) {
+        this.order_id = order_id;
+        this.orderDate = orderDate;
+        this.employee = employee;
+        this.customer = customer;
+        this.orderDetails = orderDetails;
+    }
+
+    public Order(long order_id) {
+        this.order_id = order_id;
     }
 
     public long getOrder_id() {

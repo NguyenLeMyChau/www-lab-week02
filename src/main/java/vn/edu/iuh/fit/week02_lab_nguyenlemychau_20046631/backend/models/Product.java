@@ -29,14 +29,14 @@ public class Product {
     @Column(name = "status")
     private ProductStatus status;
 
-    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn
     private List<ProductImage> productImageList = new ArrayList<>();
 
-    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn
     private List<OrderDetail> orderDetails = new ArrayList<>();
-    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn
     private List<ProductPrice> productPrices = new ArrayList<>();
 
@@ -49,6 +49,10 @@ public class Product {
         this.unit = unit;
         this.manufacturer = manufacturer;
         this.status = status;
+    }
+
+    public Product(long product_id) {
+        this.product_id = product_id;
     }
 
     public long getProduct_id() {

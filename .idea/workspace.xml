@@ -4,32 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1383bdd-c888-4896-9301-6b31e346b7f4" name="Changes" comment="insert Order">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main.rar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week02_lab_nguyenlemychau_20046631/backend/repositories/CustomerRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week02_lab_nguyenlemychau_20046631/backend/repositories/EmployeeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/customers.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/employees.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/product_detail.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/test.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+    <list default="true" id="d1383bdd-c888-4896-9301-6b31e346b7f4" name="Changes" comment="Create UI products.jsp and orders.jsp. Load data of product">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/cart.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week02_lab_nguyenlemychau_20046631/backend/enums/EmployeeStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week02_lab_nguyenlemychau_20046631/backend/enums/EmployeeStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week02_lab_nguyenlemychau_20046631/backend/enums/ProductStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week02_lab_nguyenlemychau_20046631/backend/enums/ProductStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week02_lab_nguyenlemychau_20046631/backend/repositories/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week02_lab_nguyenlemychau_20046631/backend/repositories/OrderRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week02_lab_nguyenlemychau_20046631/backend/repositories/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week02_lab_nguyenlemychau_20046631/backend/repositories/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week02_lab_nguyenlemychau_20046631/backend/services/ProductServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week02_lab_nguyenlemychau_20046631/backend/services/ProductServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week02_lab_nguyenlemychau_20046631/backend/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week02_lab_nguyenlemychau_20046631/backend/models/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week02_lab_nguyenlemychau_20046631/frontend/controllers/ServletController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week02_lab_nguyenlemychau_20046631/frontend/controllers/ServletController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week02_lab_nguyenlemychau_20046631/frontend/model/OrderModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week02_lab_nguyenlemychau_20046631/frontend/model/OrderModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week02_lab_nguyenlemychau_20046631/frontend/model/ProductModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week02_lab_nguyenlemychau_20046631/frontend/model/ProductModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/insertOrder.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/insertOrder.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/insertProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/insertProduct.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/orders.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/orders.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/products.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/products.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/product_detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/product_detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/test.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -296,7 +279,8 @@
       <workItem from="1698398434378" duration="4050000" />
       <workItem from="1698428756529" duration="820000" />
       <workItem from="1698757894940" duration="9183000" />
-      <workItem from="1699022068152" duration="9517000" />
+      <workItem from="1699022068152" duration="9897000" />
+      <workItem from="1699451832397" duration="5416000" />
     </task>
     <task id="LOCAL-00001" summary="Create Models">
       <option name="closed" value="true" />
@@ -330,7 +314,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696614248578</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Create UI products.jsp and orders.jsp. Load data of product">
+      <option name="closed" value="true" />
+      <created>1699033315301</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1699033315301</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -353,18 +345,8 @@
     <MESSAGE value="Insert, UpdateStatus, findAll Product" />
     <MESSAGE value="FindAll Order" />
     <MESSAGE value="insert Order" />
-    <option name="LAST_COMMIT_MESSAGE" value="insert Order" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week02_lab_nguyenlemychau_20046631/frontend/controllers/ServletController.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Create UI products.jsp and orders.jsp. Load data of product" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create UI products.jsp and orders.jsp. Load data of product" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -42,8 +42,7 @@
         <a href="orders.jsp">Order</a>
         <a href="employees.jsp">Employee</a>
         <a href="customers.jsp">Customer</a>
-        <a href="test.jsp">Cart</a>
-          <a href="product_detail.jsp">productdetail</a>
+        <a href="cart.jsp">Cart</a>
 
       </div>
 

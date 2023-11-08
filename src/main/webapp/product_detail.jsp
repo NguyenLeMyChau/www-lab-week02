@@ -60,6 +60,14 @@
             padding-left: 15px;
         }
 
+        input[type=text], input[type="text"]:focus {
+            font-size: 16px;
+            border: none transparent;
+            background: transparent;
+            text-align: center;
+            outline: 0
+        }
+
         .btnAdd{
             width: 150px;
             height: 50px;
@@ -86,11 +94,13 @@
                 <img src="<%=productServices.getProductImg(id).getPath()%>" alt="#">
             </div>
 
+
+            <form action="controls" method="post">
             <div class="frameInformatiuon" style="margin-left: 250px">
                     <table>
                         <tr>
-                            <th>ProductId</th>
-                            <td><%=id%></td>
+                            <th><label for="product_id">ProductId</label></th>
+                            <td><input type="text" name="product_id" id="product_id" value="<%=id%>" readonly></td>
                         </tr>
 
                         <tr>
@@ -125,9 +135,10 @@
 
                     </table>
 
-                <button class="btnAdd">ADD CART</button>
+                <button type="submit" name="action" value="addCart" class="btnAdd">ADD CART</button>
 
             </div>
+            </form>
 
         </div>
 
